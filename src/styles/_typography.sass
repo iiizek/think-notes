@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap')
+
+.header-title
+	text-align: center
+	font-family: "Inter", sans-serif
+	color: $darkblue
+	font-size: 2.4rem * 1.5
+	font-weight: 600
+	letter-spacing: .216rem
+	margin-block: 1.8rem
+
+	span
+		color: $lightgreen
+
+@mixin main-text($color, $size, $weight)
+	font-family: "Roboto", sans-serif
+	color: $color
+	font-size: $size
+	font-weight: $weight
+
+@mixin title-text($color, $size, $weight)
+	font-family: "Poppins", sans-serif
+	color: $color
+	font-size: $size
+	font-weight: $weight

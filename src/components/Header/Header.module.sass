@@ -1,0 +1,101 @@
+@import "../_imports"
+
+.container
+	padding: 1.2rem 2rem
+	border: $lightgray .2rem solid
+	border-radius: 1.2rem
+	margin-block: 2.4rem
+	
+.searchContainer
+	position: relative
+	margin-bottom: 1.8rem
+
+.search
+	padding: 1.4rem
+	padding-left: 4.8rem
+	border: $lightgray .2rem solid
+	border-radius: 1.2rem
+	font-size: 1.6rem
+	width: 100%
+
+	&::placeholder
+		color: $gray
+
+.searchIcon
+	position: absolute
+	top: 50%
+	left: 1.4rem
+	transform: translateY(-50%)
+
+.titlesContainer
+	display: flex
+	justify-content: flex-start
+	align-content: center
+	overflow: auto
+	padding-bottom: .8rem
+
+.titleStickers
+	background-color: $white
+	padding: .75rem 1.25rem
+	border: $lightgray .2rem solid
+	border-radius: .8rem
+	cursor: pointer
+	@include main-text($darkgray, 1.6rem, 400)
+	transition: .1s ease
+
+	&:hover
+		border: $darkblue .2rem solid
+		background-color: $darkblue
+		@include main-text($white, 1.6rem, 400)
+
+.newTitleContainer
+	position: relative
+
+.currentTitle
+	margin-right: 1.8rem
+	background-color: transparent
+	padding: .75rem 1.25rem
+	border: $lightgray .2rem solid
+	border-radius: .8rem
+	cursor: pointer
+	@include main-text($darkgray, 1.6rem, 500)
+	transition: .1s ease
+
+	&:hover
+		border: $darkgray .2rem solid
+
+	&__checked
+		border: $darkblue .2rem solid
+		background-color: $darkblue
+		@include main-text($white, 1.6rem, 500)
+
+		&:hover
+			border: $darkblue .2rem solid
+
+	&__new
+		right: 0rem
+		position: absolute
+		background-color: $lightgray
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+
+	&__hidden
+		display: none
+
+.addNewTitle
+	width: 18rem
+	margin-right: 1.8rem
+	background-color: transparent
+	padding: .75rem 1.25rem
+	border: $lightgray .2rem solid
+	border-radius: .8rem
+	@include main-text($black, 1.6rem, 500)
+	transition: .1s ease
+
+	&::placeholder
+		@include main-text($gray, 1.6rem, 500)
+
+	&:focus
+		outline: none
+
+		

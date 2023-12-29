@@ -1,0 +1,181 @@
+@import "../_imports"
+
+.buttonNewSticker
+	position: fixed
+	right: 2rem
+	bottom: 2rem
+	width: 6rem
+	height: 6rem
+	background-color: $darkblue
+	border-radius: 50%
+	cursor: pointer
+
+	&::before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 3rem
+		height: .4rem
+		background-color: $white
+		border-radius: .4rem
+		transition: .2s ease-in-out
+
+	&::after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) rotate(90deg)
+		width: 3rem
+		height: .4rem
+		background-color: $white
+		border-radius: .4rem
+		transition: .2s ease-in-out
+
+	&:hover
+		transition: .2s ease-in-out
+		background-color: $white
+		background-color: $lightgreen
+		&::before
+			transform: translate(-50%, -50%) rotate(180deg)
+			background-color: $darkblue
+		&::after
+			transform: translate(-50%, -50%) rotate(270deg)
+			background-color: $darkblue
+
+	&__hidden
+		transition: .2s ease
+		opacity: 0
+		
+
+.windowNewSticker
+	position: fixed
+	z-index: 1
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	max-width: 50%
+	background-color: $white
+	padding: 2rem 3rem
+	border-radius: 1.2rem
+	box-shadow: 0 0 2.5rem 100vh rgba(0, 0, 0, 0.2)
+	&__hidden
+		display: none
+
+.window
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		& > h2
+			@include title-text($black, 3.2rem, 600)
+			margin-right: 14rem
+		& > .closeWindow
+			position: relative
+			min-width: 4rem
+			height: 4rem
+			border-radius: 50%
+			cursor: pointer
+			transition: .2s ease-in-out
+
+			&::before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(45deg)
+				width: 3rem
+				height: .4rem
+				background-color: $darkblue
+				border-radius: .4rem
+				transition: .2s ease-in-out
+
+			&::after
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(135deg)
+				width: 3rem
+				height: .4rem
+				background-color: $darkblue
+				border-radius: .4rem
+				transition: .2s ease-in-out
+
+			&:hover
+				background: red
+				&::before
+					transform: translate(-50%, -50%) rotate(225deg)
+					background-color: $white
+				&::after
+					transform: translate(-50%, -50%) rotate(315deg)
+					background-color: $white
+
+	&__footer
+		display: flex
+		justify-content: flex-end
+
+		& > button
+			padding: 1rem
+			background-color: $darkblue
+			border: none
+			border-radius: .8rem
+			@include main-text($white, 1.6rem, 700)
+			cursor: pointer
+			transition: .2s ease-in-out
+
+			&:hover
+				background-color: $lightgreen
+				@include main-text($darkblue, 1.6rem, 700)
+				
+
+	&__parameters
+		padding-block: 1rem
+		margin-bottom: .5rem
+		& > h3
+			@include title-text($black, 2rem, 600)
+			margin-bottom: 1.5rem
+	
+	&__titleInput
+		@include input-default
+		width: 100%
+		margin-bottom: 1.5rem
+	&__textarea
+		@include input-default
+		margin-bottom: 1.5rem
+		width: 100%
+		height: 12rem
+		resize: none
+
+.cardContainer
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin-bottom: 1.5rem
+
+	&__item
+		display: block
+		width: 6rem
+		height: 6rem
+		border: .4rem solid $lightgray
+		border-radius: .6rem
+		cursor: pointer
+		margin-right: 1.4rem
+		transition: .1s ease-in-out
+		&:hover
+			filter: brightness(.9)
+
+
+.setCategory
+	display: flex
+	justify-content: flex-start
+	align-content: center
+	overflow: auto
+	padding-bottom: .8rem
+	-webkit-overflow-scrolling: touch
+
+	p 
+		@include main-text($gray, 1.6rem, 400)

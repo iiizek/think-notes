@@ -1,0 +1,54 @@
+@import "../_imports"
+
+.body
+	cursor: pointer
+	position: relative
+	max-width: 100%
+	overflow: hidden
+	word-wrap: break-word
+	padding: 1.8rem 1.6rem
+	border-radius: 1.6rem
+	transition: .3s ease-in-out
+	transition-property: transform, box-shadow
+
+	&:hover
+		transform: translateY(-.5rem)
+		box-shadow: 0px 8px 12px -8px rgba(0, 0, 0, 0.31)
+
+.flagImportantFlex
+	display: flex
+	justify-content: flex-end
+
+.flagImportant
+	border: none
+	background-color: transparent
+	cursor: pointer
+
+.title
+	@include title-text($black, 1.6rem, 700)
+	margin-bottom: .4rem
+
+.info
+	@include title-text($black-p, 1.2rem, 400)
+	margin-bottom: 4rem
+
+.funcButtons
+	position: absolute
+	right: 1.6rem
+	bottom: 1.6rem
+	display: flex
+	justify-content: flex-end
+	
+
+	button
+		border: none
+		background-color: transparent
+		cursor: pointer
+		&:not(:last-child)
+			margin-right: 1rem
+
+		&:hover svg path
+			fill: $darkblue
+				
+
+		

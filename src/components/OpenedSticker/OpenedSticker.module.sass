@@ -1,0 +1,55 @@
+@import '../_imports'
+
+.body
+	flex-direction: column
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	background-color: $white
+	padding: 2rem 3rem
+	border-radius: 1.2rem
+	box-shadow: 0 0 2.5rem 100vh rgba(0, 0, 0, 0.2)
+	width: 40%
+	max-height: 90vh
+	z-index: 1
+
+	.colorBar
+		width: 10%
+		height: .8rem
+		border-radius: 1rem
+		margin-block: 1.2rem
+
+	.text
+		border: none
+		border-radius: .8rem
+		background-color: transparent
+		margin-bottom: .8rem
+		padding: .4rem .8rem
+		overflow: auto
+
+	input
+		@include title-text($black, 3rem, 600)
+
+	textarea
+		@include main-text($black-p, 2rem, 400)
+		resize: none
+	
+	.apply
+		margin-top: .4rem
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+
+		button
+			padding: 1rem
+			background-color: $darkblue
+			border: none
+			border-radius: .8rem
+			@include main-text($white, 1.6rem, 700)
+			cursor: pointer
+			transition: .2s ease-in-out
+
+			&:hover
+				background-color: $lightgreen
+				@include main-text($darkblue, 1.6rem, 700)
